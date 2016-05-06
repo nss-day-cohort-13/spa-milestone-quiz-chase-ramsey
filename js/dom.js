@@ -14,7 +14,13 @@ var Carlot = (function(aug) {
 									 			`<dt>Price</dt><dd>$${car.price}</dd>` +
 									 			`<dt>Color</dt><dd class="text-capitalize">${car.color}</dd>` +
 									 			`<dt>Description</dt><dd class="text-justify">${car.description}</dd>` +
-									 		`</dl>` +
+									 			`<dt>Availability</dt>`;
+									 			if (car.purchased === "false") {
+									 			buildHTML += `<dd class="available">Available</dd>`;
+									 			} else {
+									 				buildHTML += `<dd class="backorder">On backorder</dd>`;
+									 			}
+			buildHTML +=		`</dl>` +
 								 		`</div>` +
 								 		`<div class="column col-lg-1"></div>`;
 		})

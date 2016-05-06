@@ -13,10 +13,29 @@ body {
 	background: #30638E;
 }
 
+.wrapper {
+	width: 95%;
+}
+
 
 /*-__________ Header styles __________-*/
 
+/* Form */
 
+.form-group input[type="text"] {
+	width: 300px;
+	color: #D1495B;
+}
+
+/* Image */
+
+img {
+	width: 45px;
+	height: 45px;
+	border-radius: 5px;
+	margin: 2px;
+	margin-left: 200px;
+}
 
 
 /*-__________ Main content area styles __________-*/
@@ -42,4 +61,12 @@ dd {
 dd {
 	background:lightgrey;
 	border-radius: 2px;
+}
+
+.available {
+	color: #2FBF71;
+}
+
+.backorder {
+	color: #D1495B;
 }
