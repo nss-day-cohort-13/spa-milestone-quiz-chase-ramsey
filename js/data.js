@@ -3,10 +3,19 @@ var Carlot = (function(aug) {
 
 	var inventory = [];
 
-	aug.loadInventory = function() {
+	function CarObj(item, id) {
+		this.item = item;
+		this.id = id;
+	}
+
+	aug.loadInventory = function(newCar) {
 		var data = JSON.parse(this.responseText);
-		data.cars.forEach(function (car) {inventory.push(car);});
+		for (var i = 0; i < data.cars.length; i++) {
+			newCar = new CarObj(data.cars[i], `car${i}`);
+			inventory.push(newCar);
+		}
 		Carlot.populatePage(inventory);
+		console.log("inventory: ", inventory);
 	};
 
 	aug.getInventory = function() {

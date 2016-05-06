@@ -59,7 +59,7 @@ dd {
 }
 
 dd {
-	background:lightgrey;
+	background: #dadada;
 	border-radius: 2px;
 }
 
@@ -69,4 +69,14 @@ dd {
 
 .backorder {
 	color: #D1495B;
+}
+
+/*-__________ Toggle styles [do not override] __________-*/
+
+.card-focus {
+	background: #2FBF71;
+}
+
+.card-focus-border {
+	border: 2px solid #fff;
 }
