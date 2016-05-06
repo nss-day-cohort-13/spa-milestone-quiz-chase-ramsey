@@ -6,12 +6,12 @@ var Carlot = (function(aug) {
 	aug.loadInventory = function() {
 		var data = JSON.parse(this.responseText);
 		data.cars.forEach(function (car) {inventory.push(car);});
-	}
+	};
 
 	aug.getInventory = function() {
 		return inventory;
-	}
+	};
 
-return aug;
+	return aug;
 
 }(Carlot || {}));

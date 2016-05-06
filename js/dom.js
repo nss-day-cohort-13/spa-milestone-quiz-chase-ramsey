@@ -1,6 +1,10 @@
 
 var Carlot = (function(aug) {
 
-return aug;
+	aug.activateEvents = function () {
+
+	};
+
+	return aug;
 
 }(Carlot || {}));
