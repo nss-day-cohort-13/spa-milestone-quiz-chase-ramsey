@@ -6,6 +6,7 @@ var Carlot = (function(aug) {
 	aug.loadInventory = function() {
 		var data = JSON.parse(this.responseText);
 		data.cars.forEach(function (car) {inventory.push(car);});
+		Carlot.populatePage(inventory);
 	};
 
 	aug.getInventory = function() {

@@ -10,6 +10,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+	background: #30638E;
 }
 
 
@@ -20,6 +21,25 @@ body {
 
 /*-__________ Main content area styles __________-*/
 
+.card {
+	background: #fff;
+	border-radius: 3px;
+}
 
+/* Description list */
 
+dl {
+	border: 1px solid;
+	border-radius: 2px;
+	padding: 5px;
+}
 
+dt,
+dd {
+	padding: 10px;
+}
+
+dd {
+	background:lightgrey;
+	border-radius: 2px;
+}

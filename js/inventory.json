@@ -6,7 +6,7 @@
 			"model": "Sable",
 			"year": "1995",
 			"price": "1799",
-			"color": "white",
+			"color": "grey",
 			"purchased": "false",
 			"description": "This car was a real piece of junk that was handed down to me from my sister, who had it handed down from our grandfather, who had way to much money to be driving this embarassment of a motor vehicle. It comes with blue cloth interior and an old Sony Discman you can plug into the tape player."
 		},
@@ -17,7 +17,7 @@
 			"price": "2799",
 			"color": "gold",
 			"purchased": "false",
-			"description": "It seems almost like a matter of fate that I inherited this car from my dad when you consider I was in the room when he shook hands with the salesman he bought it from. It was great car for a 16-year-old in a band until it exploded on the side of Lookout Mountain. Leather seats and seat warmers. A steal at 2799."
+			"description": "It seems almost like a matter of fate that I inherited this car from my dad when you consider I was in the room when he shook hands with the salesman he bought it from. It was great car for a 16-year-old in a band until it exploded on the side of Lookout Mountain. Leather seats and seat warmers. A steal at $2799."
 		},
 		{
 			"make": "Jeep",
