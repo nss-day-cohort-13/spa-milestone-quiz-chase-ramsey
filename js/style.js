@@ -6,6 +6,9 @@ var Carlot = (function(aug) {
 	var currentInventory;
 
 	aug.cardFocus = function (editElem) {
+		textInput.removeAttribute("disabled", "true");
+		textInput.focus("true");
+		checkPurchased.removeAttribute("disabled", "true");
 		editElem.classList.add("card-focus");
 		var descList = editElem.querySelector("dl");
 		descList.removeAttribute("style");
@@ -32,8 +35,8 @@ var Carlot = (function(aug) {
 	aug.cardFocusOff = function() {
 		currentInventory.item.description = textInput.value;
 		currentInventory.item.purchased = checkPurchased.checked.toString();
-		console.log("currentInventory: ", currentInventory);
 		Carlot.editInventory(currentInventory);
+
 		currentEdit.classList.remove("card-focus");
 		currentList.classList.remove("card-focus-border");
 		textInput.removeAttribute("disabled", "false");

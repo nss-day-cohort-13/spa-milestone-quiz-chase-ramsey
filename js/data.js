@@ -32,8 +32,6 @@ var Carlot = (function(aug) {
 		});
 		toChange.item.description = editedItem.item.description;
 		toChange.item.purchased = editedItem.item.purchased;
-		console.log("toChange: ", toChange);
-		console.log("inventory after edit: ", inventory);
 		Carlot.populatePage(inventory);
 	}
 

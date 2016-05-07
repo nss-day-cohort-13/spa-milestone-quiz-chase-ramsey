@@ -31,9 +31,6 @@ var Carlot = (function(aug) {
 			card.addEventListener("click", function(click) {
 				if (editMode === false) {
 					editMode = true;
-					textInput.removeAttribute("disabled", "true");
-					textInput.focus("true");
-					checkPurchased.removeAttribute("disabled", "true")
 					var editElem = document.getElementById(this.id);
 					Carlot.cardFocus(editElem);
 				} else {
