@@ -10,7 +10,7 @@ var Carlot = (function(aug) {
 									 			`<dt>Year</dt><dd>${car.item.year}</dd>` +
 									 			`<dt>Price</dt><dd>$${car.item.price}</dd>` +
 									 			`<dt>Color</dt><dd class="text-capitalize">${car.item.color}</dd>` +
-									 			`<dt>Description</dt><dd class="text-justify">${car.item.description}</dd>` +
+									 			`<dt>Description</dt><dd class="text-justify description">${car.item.description}</dd>` +
 									 			`<dt>Availability</dt>`;
 									 			if (car.item.purchased === "false") {
 									 			buildHTML += `<dd class="available">Available</dd>`;

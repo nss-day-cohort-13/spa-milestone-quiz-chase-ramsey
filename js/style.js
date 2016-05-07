@@ -25,6 +25,8 @@ var Carlot = (function(aug) {
 			return car.id === currentEdit.id;
 		});
 		textInput.value = currentInventory.item.description;
+		var currentDesc = currentList.querySelector(".description");
+		textInput.addEventListener("keyup", function() {currentDesc.innerText = textInput.value})
 		if (currentInventory.item.purchased === "true") {
 			checkPurchased.checked = true;
 		} else if (currentInventory.item.purchased === "false") {
