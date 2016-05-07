@@ -1,10 +1,6 @@
 
 var Carlot = (function(aug) {
 
-	var outputDiv = document.getElementById("output");
-	var textInput = document.getElementById("input");
-	textInput.setAttribute("disabled", "true");
-
 	aug.populatePage = function (inventory) {
 		var buildHTML = "";
 		inventory.forEach(function(car) {
@@ -32,11 +28,16 @@ var Carlot = (function(aug) {
 	aug.activateEvents = function () {
 		var cards = Array.from(document.getElementsByClassName("card"));
 		cards.forEach(function(card) {
-			card.addEventListener("click", function() {
-				textInput.removeAttribute("disabled", "true");
-				textInput.focus("true");
-				var editElem = document.getElementById(this.id);
-				Carlot.cardFocus(editElem);
+			card.addEventListener("click", function(click) {
+				if (editMode === false) {
+					editMode = true;
+					textInput.removeAttribute("disabled", "true");
+					textInput.focus("true");
+					var editElem = document.getElementById(this.id);
+					Carlot.cardFocus(editElem);
+				} else {
+					return;
+				}
 			});
 		});
 	};

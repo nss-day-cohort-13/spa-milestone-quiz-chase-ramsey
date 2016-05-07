@@ -15,7 +15,6 @@ var Carlot = (function(aug) {
 			inventory.push(newCar);
 		}
 		Carlot.populatePage(inventory);
-		console.log("inventory: ", inventory);
 	};
 
 	aug.getInventory = function() {
