@@ -43,6 +43,7 @@ img {
 .card {
 	background: #fff;
 	border-radius: 3px;
+	margin-bottom: 20px;
 }
 
 /* Description list */
@@ -74,7 +75,7 @@ dd {
 /*-__________ Toggle styles [do not override] __________-*/
 
 .card-focus {
-	background: #2FBF71;
+	background: #74D39E;
 }
 
 .card-focus-border {

@@ -8,7 +8,7 @@ var Carlot = (function(aug) {
 	aug.populatePage = function (inventory) {
 		var buildHTML = "";
 		inventory.forEach(function(car) {
-			buildHTML += `<div id="${car.id}" class="card column col-lg-3">` +
+			buildHTML += `<div id="${car.id}" class="card column col-lg-3 col-md-5 col-sm-5 col-xs-12">` +
 											`<h2>${car.item.make} ${car.item.model}</h2>` +
 									 		`<dl style="border-color:${car.item.color}">` +
 									 			`<dt>Year</dt><dd>${car.item.year}</dd>` +
@@ -23,7 +23,7 @@ var Carlot = (function(aug) {
 									 			}
 			buildHTML +=		`</dl>` +
 								 		`</div>` +
-								 		`<div class="column col-lg-1"></div>`;
+								 		`<div class="column col-lg-1 col-md-1 col-sm-1"></div>`;
 		});
 		outputDiv.innerHTML = buildHTML;
 		Carlot.activateEvents();

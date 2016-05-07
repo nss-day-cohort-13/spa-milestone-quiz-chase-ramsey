@@ -2,9 +2,12 @@
 var Carlot = (function(aug) {
 
 	aug.cardFocus = function (editElem) {
-		console.log("click");
-		editElem.classList.toggle("card-focus");
+		editElem.classList.add("card-focus");
 	};
+
+	aug.cardFocusOff = function(editElem) {
+		editElem.classList.remove("card-focus");
+	}
 
 	return aug;
 
