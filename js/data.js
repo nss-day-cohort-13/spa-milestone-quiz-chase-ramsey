@@ -9,12 +9,17 @@ var Carlot = (function(aug) {
 	}
 
 	aug.loadInventory = function(newCar) {
-		var data = JSON.parse(this.responseText);
-		for (var i = 0; i < data.cars.length; i++) {
-			newCar = new CarObj(data.cars[i], `car${i}`);
-			inventory.push(newCar);
-		}
+		var requestData = new XMLHttpRequest();
+		requestData.addEventListener("load", function () {
+			var data = JSON.parse(this.responseText);
+			for (var i = 0; i < data.cars.length; i++) {
+				newCar = new CarObj(data.cars[i], `car${i}`);
+				inventory.push(newCar);
+			}
 		Carlot.populatePage(inventory);
+		});
+		requestData.open("GET", "js/inventory.json");
+		requestData.send();
 	};
 
 	aug.getInventory = function() {
