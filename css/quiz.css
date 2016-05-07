@@ -23,8 +23,20 @@ body {
 /* Form */
 
 .form-group input[type="text"] {
-	width: 300px;
+	width: 500px;
 	color: #D1495B;
+}
+
+label {
+	margin: 0 50px;
+}
+
+input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+.disabled {
+	color: darkgrey;
 }
 
 /* Image */

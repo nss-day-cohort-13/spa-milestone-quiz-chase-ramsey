@@ -29,8 +29,11 @@ var Carlot = (function(aug) {
 	aug.editInventory = function(editedItem) {
 		var toChange = inventory.find(function(car) {
 			return car.id === editedItem.id;
-		})
+		});
 		toChange.item.description = editedItem.item.description;
+		toChange.item.purchased = editedItem.item.purchased;
+		console.log("toChange: ", toChange);
+		console.log("inventory after edit: ", inventory);
 		Carlot.populatePage(inventory);
 	}
 

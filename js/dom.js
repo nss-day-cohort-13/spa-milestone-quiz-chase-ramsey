@@ -15,7 +15,7 @@ var Carlot = (function(aug) {
 									 			if (car.item.purchased === "false") {
 									 			buildHTML += `<dd class="available">Available</dd>`;
 									 			} else {
-									 				buildHTML += `<dd class="backorder">On backorder</dd>`;
+									 				buildHTML += `<dd class="backorder">Out of stock</dd>`;
 									 			}
 			buildHTML +=		`</dl>` +
 								 		`</div>` +
@@ -33,6 +33,7 @@ var Carlot = (function(aug) {
 					editMode = true;
 					textInput.removeAttribute("disabled", "true");
 					textInput.focus("true");
+					checkPurchased.removeAttribute("disabled", "true")
 					var editElem = document.getElementById(this.id);
 					Carlot.cardFocus(editElem);
 				} else {
