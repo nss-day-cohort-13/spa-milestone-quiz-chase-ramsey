@@ -20,13 +20,12 @@ var Carlot = (function(aug) {
 	};
 
 	aug.cardEdit = function () {
-		inventory = Carlot.getInventory();
+		var inventory = Carlot.getInventory();
 		currentInventory = inventory.find(function(car) {
 			return car.id === currentEdit.id;
 		});
-		textInput.value = currentInventory.item.description;
 		var currentDesc = currentList.querySelector(".description");
-		textInput.addEventListener("keyup", function() {currentDesc.innerText = textInput.value})
+		textInput.addEventListener("keyup", function() {currentDesc.innerText = textInput.value;});
 		if (currentInventory.item.purchased === "true") {
 			checkPurchased.checked = true;
 		} else if (currentInventory.item.purchased === "false") {
@@ -35,10 +34,7 @@ var Carlot = (function(aug) {
 	}
 
 	aug.cardFocusOff = function() {
-		currentInventory.item.description = textInput.value;
-		currentInventory.item.purchased = checkPurchased.checked.toString();
 		Carlot.editInventory(currentInventory);
-
 		currentEdit.classList.remove("card-focus");
 		currentList.classList.remove("card-focus-border");
 		textInput.removeAttribute("disabled", "false");

@@ -27,11 +27,8 @@ var Carlot = (function(aug) {
 	};
 
 	aug.editInventory = function(editedItem) {
-		var toChange = inventory.find(function(car) {
-			return car.id === editedItem.id;
-		});
-		toChange.item.description = editedItem.item.description;
-		toChange.item.purchased = editedItem.item.purchased;
+		editedItem.item.description = textInput.value;
+		editedItem.item.purchased = checkPurchased.checked.toString();
 		Carlot.populatePage(inventory);
 	}
 

@@ -11,7 +11,7 @@
 	var checkPurchased = document.getElementById("purchased");
 	checkPurchased.setAttribute("disabled", "true");
 
-// Label for checkbox
+// Label for checkbox - stored here for toggling the .disabled class
 	var labelPurchased = document.getElementById("labelPurchased");
 
 // Navbar submit button - listens for click and calls Carlot.cardFocusOff
