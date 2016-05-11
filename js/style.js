@@ -33,7 +33,8 @@ var Carlot = (function(aug) {
 		}
 	}
 
-	aug.cardFocusOff = function() {
+	aug.cardFocusOff = function(event) {
+		event.preventDefault();
 		Carlot.editInventory(currentInventory);
 		currentEdit.classList.remove("card-focus");
 		currentList.classList.remove("card-focus-border");
